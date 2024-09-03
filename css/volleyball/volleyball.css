@@ -1,0 +1,28 @@
+/* volleyball.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png'); /* Use the 3px tile texture */
+    background-size: 100px 100px; /* Resize the background texture */
+    background-repeat: repeat; /* Repeat the texture to cover the whole page */
+    background-attachment: fixed; /* Fixed background for smooth scrolling */
+    color: #f0f0f0; /* Light text color for contrast */
+}
+
+.content {
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.5em; /* Header font size */
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #333333; /* Dark background color for the header */
+    color: #ffffff; /* White text color for contrast */
+    border-radius: 5px; /* Slightly rounded corners */
+    display: inline-block; /* Shrink wrap the element to the text */
+    box-shadow: 0 30px 25px rgba(0, 0, 0, 0.541); /* Pronounced shadow for depth */
+}
