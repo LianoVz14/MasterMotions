@@ -1,0 +1,85 @@
+/* rugby.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png'); /* Use the 3px tile texture */
+    background-size: 100px 100px; /* Resize the background texture */
+    background-repeat: repeat; /* Repeat the texture to cover the whole page */
+    background-attachment: fixed; /* Fixed background for smooth scrolling */
+    color: #f0f0f0; /* Light text color for contrast */
+}
+
+.content {
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.5em; /* Smaller, cleaner font size for a header */
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #333333; /* Dark background color for the header */
+    color: #ffffff; /* White text color for contrast */
+    border-radius: 5px; /* Slightly rounded corners for a modern touch */
+    display: inline-block; /* Shrink wrap the element to the text */
+    box-shadow: 0 30px 25px rgba(0, 0, 0, 0.541); /* More pronounced shadow for depth */
+}
+
+/* Container for image options */
+.image-container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 20px;
+}
+
+.image-link {
+    display: block; /* Make the <a> tag a block element to encompass the whole image-option */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.image-option {
+    position: relative;
+    width: 300px; /* Fixed width for image container */
+    height: 200px; /* Fixed height for image container */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden;
+    margin-right: 20px; /* Space between image options */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.image-option img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Ensures the image spans the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure image does not exceed container height */
+    transform: translate(-50%, -50%); /* Center the image */
+}
+
+.image-link:hover .image-option {
+    transform: scale(1.07); /* Zoom in by 7% on hover */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1; /* Always visible */
+    z-index: 1; /* Ensure overlay is above image */
+}
+
+.text {
+    color: #ffffff; /* White text color */
+    font-size: 1.5em; /* Adjust text size as needed */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow for text */
+}
