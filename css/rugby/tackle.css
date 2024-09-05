@@ -1,14 +1,15 @@
 /* tackle.css */
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #121212; /* Dark background color */
-    background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png'); /* Use the 3px tile texture */
+    background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png'); /* Background texture */
     background-size: 100px 100px; /* Resize the background texture */
-    background-repeat: repeat; /* Repeat the texture to cover the whole page */
+    background-repeat: repeat; /* Repeat the texture */
     background-attachment: fixed; /* Fixed background for smooth scrolling */
-    color: #f0f0f0; /* Light text color for contrast */
+    color: #f0f0f0; /* Light text color */
 }
 
 .content {
@@ -17,12 +18,141 @@ body {
 }
 
 h1 {
-    font-size: 2.5em; /* Font size for the header */
+    font-size: 2.5em;
     margin: 0;
     padding: 10px 20px;
-    background-color: #333333; /* Dark background color for the header */
-    color: #ffffff; /* White text color for contrast */
-    border-radius: 5px; /* Slightly rounded corners for a modern touch */
-    display: inline-block; /* Shrink wrap the element to the text */
-    box-shadow: 0 30px 25px rgba(0, 0, 0, 0.541); /* More pronounced shadow for depth */
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0 30px 25px rgba(0, 0, 0, 0.541);
+}
+
+/* Accordion styles */
+.accordion {
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.5em;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.accordion-button::after {
+    content: '\25BC'; /* Unicode down arrow */
+    font-size: 1.2em;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+}
+
+.accordion-button.active::after {
+    transform: translateY(-50%) rotate(-180deg); /* Up arrow when active */
+}
+
+.accordion-button:hover {
+    background-color: #444;
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.accordion-content {
+    display: block;
+    background-color: #333;
+    padding: 20px;
+    border-top: 2px solid #444;
+    border-radius: 0 0 8px 8px;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.accordion-content.show {
+    max-height: 1000px; /* Adjusted for content height */
+    opacity: 1;
+}
+
+/* Tutorial styles */
+.tutorial {
+    color: #e0e0e0; /* Slightly lighter text color */
+}
+
+.tutorial h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff9800; /* Orange text color for main title */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(90deg, #ff5722, #ff9800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 3px solid #ff5722;
+    padding-bottom: 10px;
+    display: inline-block;
+    font-family: 'Bebas Neue', sans-serif; /* Bold and eye-catching font */
+}
+
+.tutorial h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #ff5722; /* Bright, appealing color for step titles */
+    font-family: 'Lora', serif; /* Elegant and readable font */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 1px; /* Slight spacing for readability */
+    background: rgba(255, 87, 34, 0.1);
+    border-left: 5px solid #ff5722;
+    padding-left: 10px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.tutorial h3:hover {
+    background: rgba(255, 87, 34, 0.2);
+    color: #ffffff; /* Change color on hover for better contrast */
+}
+
+.tutorial ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tutorial li {
+    background: #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.tutorial li:hover {
+    background: #555;
+    transform: translateX(5px);
+}
+
+.tutorial p {
+    line-height: 1.6;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ddd;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 15px;
 }
